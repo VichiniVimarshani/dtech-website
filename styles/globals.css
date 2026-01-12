@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Swiper pagination positioning (mobile friendly) */
+.swiper-pagination {
+  bottom: 22px !important;
+}
+
+/* Make Swiper bullets visible on dark hero */
+.swiper-pagination-bullet {
+  opacity: 0.6;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Improve tap highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
