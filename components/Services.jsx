@@ -35,7 +35,10 @@ export default function Services() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((s) => (
-            <div key={s.title} className="text-center">
+            <div
+              key={s.title}
+              className="flex flex-col items-center text-center h-full"
+            >
               <div className="text-brandRed text-4xl mx-auto mb-4">{s.icon}</div>
               <h3 className="font-semibold text-lg mb-2">{s.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed">{s.text}</p>

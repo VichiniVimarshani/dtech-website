@@ -1,5 +1,3 @@
-import { FaToolbox } from "react-icons/fa";
-
 export default function ProductRange({ full = false }) {
   return (
     <section className="py-20 bg-gray-50">
@@ -33,10 +31,7 @@ export default function ProductRange({ full = false }) {
           />
 
           <div className="bg-white p-6 rounded-lg shadow">
-            <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
-              <FaToolbox className="text-3xl text-brandRed" />
-              <h3 className="font-bold text-xl">Essential Accessories & Networking Hardware</h3>
-            </div>
+            <h3 className="font-bold text-xl mb-3">Essential Accessories & Networking Hardware</h3>
             <ul className="space-y-2 text-gray-700">
               <li>• Surveillance Grade Hard Disks</li>
               <li>• CCTV Power Supplies & Adapters</li>
