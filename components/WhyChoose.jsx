@@ -19,7 +19,7 @@ export default function WhyChoose() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section id="why-choose" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         {/* Highlighted Section */}
         <div className="rounded-2xl bg-gradient-to-br from-blue-950 via-blue-900 to-brandRed p-8 md:p-12 shadow-2xl text-white relative overflow-hidden">
