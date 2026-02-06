@@ -2,8 +2,10 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function Contact() {
+  const [state, handleSubmit] = useForm("mlgwryeg");
   return (
     <>
       <Head>
@@ -93,72 +95,95 @@ export default function Contact() {
             {/* Right Column: Contact Form */}
             <div className="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-slate-100">
               <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
-              <form className="space-y-6">
 
-                {/* Name */}
-                <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">Your Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
-                    placeholder="John Doe"
-                  />
+              {state.succeeded ? (
+                <div className="text-center py-12 animate-fadeIn">
+                  <div className="bg-green-100 text-green-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
+                  <p className="text-gray-600">Thanks for reaching out. We'll get back to you shortly.</p>
                 </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
 
-                {/* Email */}
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
-                    placeholder="john@example.com"
-                  />
-                </div>
+                  {/* Name */}
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">Your Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
+                      placeholder="John Doe"
+                    />
+                  </div>
 
-                {/* Address (Requested Field) */}
-                <div>
-                  <label htmlFor="address" className="block text-sm font-semibold text-slate-700 mb-2">Your Address</label>
-                  <input
-                    type="text"
-                    id="address"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
-                    placeholder="City / Area"
-                  />
-                </div>
+                  {/* Email */}
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
+                      placeholder="john@example.com"
+                    />
+                    <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 text-sm mt-1" />
+                  </div>
 
-                {/* Message */}
-                <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">Message or Comment</label>
-                  <textarea
-                    id="message"
-                    rows="4"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition resize-none"
-                    placeholder="How can we help you?"
-                  ></textarea>
-                </div>
+                  {/* Address (Requested Field) */}
+                  <div>
+                    <label htmlFor="address" className="block text-sm font-semibold text-slate-700 mb-2">Your Address</label>
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
+                      placeholder="City / Area"
+                    />
+                  </div>
 
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition transform hover:-translate-y-1 shadow-lg shadow-slate-900/20"
-                >
-                  Send Message
-                </button>
+                  {/* Message */}
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">Message or Comment</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="4"
+                      required
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition resize-none"
+                      placeholder="How can we help you?"
+                    ></textarea>
+                    <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-500 text-sm mt-1" />
+                  </div>
 
-                <div className="text-center pt-4">
-                  <p className="text-sm text-slate-500">Or chat deeply directly on</p>
-                  <a
-                    href="https://wa.me/94777060211"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-green-600 font-semibold hover:text-green-700 mt-2"
+                  {/* Submit Button */}
+                  <button
+                    type="submit"
+                    disabled={state.submitting}
+                    className="w-full bg-slate-900 hover:bg-slate-800 disabled:bg-slate-500 text-white font-bold py-4 rounded-xl transition transform hover:-translate-y-1 shadow-lg shadow-slate-900/20"
                   >
-                    <FaWhatsapp className="text-lg" /> WhatsApp
-                  </a>
-                </div>
-              </form>
+                    {state.submitting ? "Sending..." : "Send Message"}
+                  </button>
+
+                  <div className="text-center pt-4">
+                    <p className="text-sm text-slate-500">Or chat deeply directly on</p>
+                    <a
+                      href="https://wa.me/94777060211"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-green-600 font-semibold hover:text-green-700 mt-2"
+                    >
+                      <FaWhatsapp className="text-lg" /> WhatsApp
+                    </a>
+                  </div>
+                </form>
+              )}
             </div>
 
           </div>
