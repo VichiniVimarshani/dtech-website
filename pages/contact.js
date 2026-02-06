@@ -17,16 +17,24 @@ export default function Contact() {
 
       <Navbar />
 
-      <div className="min-h-screen bg-gray-50 pt-24 pb-12 font-sans text-slate-800">
-        <div className="max-w-7xl mx-auto px-6">
+      <div className="min-h-screen bg-gray-50 font-sans text-slate-800">
 
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Get in Touch</h1>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+        {/* Header with Background Image */}
+        <div
+          className="relative bg-gray-900 bg-cover bg-center py-28 mb-12"
+          style={{ backgroundImage: "url('/hero-8.png')" }}
+        >
+          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="relative max-w-7xl mx-auto px-6 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Get in Touch</h1>
+            <p className="text-lg text-gray-200 max-w-2xl mx-auto">
               Have questions about our CCTV or networking solutions? We're here to help. Reach out to us directly or fill out the form below.
             </p>
           </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 pb-12">
+
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
 

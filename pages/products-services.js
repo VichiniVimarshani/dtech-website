@@ -26,10 +26,14 @@ export default function ProductsServices() {
       <Navbar />
 
       {/* page header spacing for fixed navbar */}
-      <section className="pt-24 pb-10 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <h1 className="text-4xl font-bold">Products & Services</h1>
-          <p className="text-gray-600 mt-2">
+      <section
+        className="relative pt-32 pb-20 bg-gray-900 bg-cover bg-center"
+        style={{ backgroundImage: "url('/hero-5.png')" }}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="relative max-w-7xl mx-auto px-6 text-center">
+          <h1 className="text-4xl font-bold text-white">Products & Services</h1>
+          <p className="text-gray-200 mt-2 max-w-2xl mx-auto">
             Professional Hikvision surveillance and Imou smart home security — clearly separated and easy to compare.
           </p>
         </div>
