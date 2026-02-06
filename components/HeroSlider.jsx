@@ -1,20 +1,26 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, EffectFade } from "swiper/modules";
+import { Autoplay, Pagination, EffectFade, Navigation } from "swiper/modules";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import "swiper/css/navigation";
 
 export default function HeroSlider() {
   return (
-    <section className="relative">
+    <section className="relative group">
       <Swiper
-        modules={[Autoplay, Pagination, EffectFade]}
+        modules={[Autoplay, Pagination, EffectFade, Navigation]}
         effect="fade"
         autoplay={{ delay: 4500, disableOnInteraction: false }}
         pagination={{ clickable: true }}
+        navigation={{
+          nextEl: ".slider-next",
+          prevEl: ".slider-prev",
+        }}
         loop
-        className="h-[100dvh]"
+        className="h-[100dvh] [&_.swiper-pagination-bullet]:bg-white [&_.swiper-pagination-bullet]:opacity-70 [&_.swiper-pagination-bullet]:w-3 [&_.swiper-pagination-bullet]:h-3 [&_.swiper-pagination-bullet-active]:bg-brandRed [&_.swiper-pagination-bullet-active]:opacity-100 [&_.swiper-pagination-bullet]:transition-colors [&_.swiper-pagination-bullet:hover]:bg-brandRed"
       >
         <SwiperSlide>
           <Slide
@@ -40,6 +46,14 @@ export default function HeroSlider() {
           />
         </SwiperSlide>
       </Swiper>
+
+      {/* Custom Navigation Arrows */}
+      <button className="slider-prev absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full backdrop-blur-sm transition duration-300 opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center">
+        <FaChevronLeft className="text-xl" />
+      </button>
+      <button className="slider-next absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full backdrop-blur-sm transition duration-300 opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center">
+        <FaChevronRight className="text-xl" />
+      </button>
     </section>
   );
 }

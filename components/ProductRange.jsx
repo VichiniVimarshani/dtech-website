@@ -58,7 +58,7 @@ export default function ProductRange({ full = false }) {
 
         {!full && (
           <div className="text-center mt-12">
-            <a href="/products-services" className="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition shadow-md">
+            <a href="/products-services" className="inline-block px-8 py-3 bg-brandRed text-white font-semibold rounded-full hover:bg-blue-700 transition shadow-md">
               View All Products & Services
             </a>
             <p className="text-sm text-gray-500 mt-4">

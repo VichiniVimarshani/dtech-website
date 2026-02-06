@@ -1,3 +1,5 @@
+import { FaWhatsapp } from "react-icons/fa";
+
 export default function WhatsAppButton() {
   return (
     <a
@@ -17,7 +19,7 @@ export default function WhatsAppButton() {
       "
       title="WhatsApp"
     >
-      💬
+      <FaWhatsapp className="text-3xl" />
     </a>
   );
 }
