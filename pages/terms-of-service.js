@@ -16,7 +16,6 @@ export default function TermsOfService() {
                 <div className="max-w-4xl mx-auto px-6 text-center">
                     <h1 className="text-4xl font-bold mb-6">Terms of Service</h1>
                     <p className="text-gray-300">Effective Date: February 9, 2026</p>
-                    <p className="text-gray-300">Website: https://dtechsolution.netlify.app/</p>
                 </div>
             </section>
 
