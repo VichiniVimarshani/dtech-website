@@ -68,7 +68,7 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li><FooterLink href="/#why-choose">Why Choose Us</FooterLink></li>
               <li><FooterLink href="/#brand-partners">Brand Partners</FooterLink></li>
-              <li><FooterLink href="/#reviews">Customer Reviews</FooterLink></li>
+              <li><FooterLink href="/about">Our Expertise</FooterLink></li>
               <li><FooterLink href="/contact">Support Center</FooterLink></li>
             </ul>
           </div>
