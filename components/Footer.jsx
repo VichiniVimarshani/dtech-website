@@ -22,9 +22,8 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div className="flex items-center gap-4 mb-8">
-              <SocialLink href="#" icon={<FaFacebookF />} />
+              <SocialLink href="https://www.facebook.com/" icon={<FaFacebookF />} />
               <SocialLink href="https://wa.me/94777060211" icon={<FaWhatsapp />} />
-              <SocialLink href="#" icon={<FaLinkedinIn />} />
             </div>
 
             {/* Reviews / Trust */}
@@ -56,10 +55,10 @@ export default function Footer() {
           <div>
             <h4 className="text-gray-500 uppercase text-xs tracking-wider font-semibold mb-6">Company</h4>
             <ul className="space-y-4 text-sm">
+              <li><FooterLink href="/index">Home</FooterLink></li>
               <li><FooterLink href="/about">About Us</FooterLink></li>
               <li><FooterLink href="/contact">Contact Us</FooterLink></li>
               <li><FooterLink href="/products-services">Our Services</FooterLink></li>
-              <li><FooterLink href="#">Our Team</FooterLink></li>
             </ul>
           </div>
 
@@ -80,9 +79,9 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Dtech Solutions. All rights reserved.</p>
 
           <div className="flex items-center gap-6">
-            <Link href="#" className="hover:text-white transition">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition">Terms of Service</Link>
-            <Link href="#" className="hover:text-white transition">Report a Vulnerability</Link>
+            <Link href="/privacy-policy" className="hover:text-white transition">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-white transition">Terms of Service</Link>
+            <Link href="/vulnerability-report" className="hover:text-white transition">Report a Vulnerability</Link>
           </div>
         </div>
       </div>
