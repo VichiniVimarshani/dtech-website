@@ -55,7 +55,7 @@ export default function Footer() {
           <div>
             <h4 className="text-gray-500 uppercase text-xs tracking-wider font-semibold mb-6">Company</h4>
             <ul className="space-y-4 text-sm">
-              <li><FooterLink href="/index">Home</FooterLink></li>
+              <li><FooterLink href="/">Home</FooterLink></li>
               <li><FooterLink href="/about">About Us</FooterLink></li>
               <li><FooterLink href="/contact">Contact Us</FooterLink></li>
               <li><FooterLink href="/products-services">Our Services</FooterLink></li>
