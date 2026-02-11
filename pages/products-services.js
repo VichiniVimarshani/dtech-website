@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import BrandPartners from "../components/BrandPartners";
 import ProductRange from "../components/ProductRange";
+import HRMSection from "../components/HRMSection";
 import Services from "../components/Services";
 import WhyChoose from "../components/WhyChoose";
 import Footer from "../components/Footer";
@@ -41,6 +42,7 @@ export default function ProductsServices() {
 
       <BrandPartners />
       <ProductRange full />
+      <HRMSection />
       <Services />
       <WhyChoose />
       <Footer />

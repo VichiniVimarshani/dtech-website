@@ -47,7 +47,7 @@ export default function Footer() {
               <li><FooterLink href="/products-services">Imou Smart Home</FooterLink></li>
               <li><FooterLink href="/products-services">Networking Hardware</FooterLink></li>
               <li><FooterLink href="/products-services">Access Control</FooterLink></li>
-              <li><FooterLink href="/products-services">Alarm Systems</FooterLink></li>
+              <li><FooterLink href="/hrm-management-system">HR Management System</FooterLink></li>
             </ul>
           </div>
 
