@@ -99,7 +99,7 @@ function Card({ label, title, audience, items, image, description, buttons, full
         )}
 
         {full && items[0]?.img ? (
-          <div className="grid grid-cols-2 gap-4 mt-auto">
+          <div className="grid grid-cols-2 gap-4">
             {items.map((item, index) => (
               <div key={index} className="flex flex-col items-center text-center p-3 border border-gray-100 rounded-lg hover:shadow-md transition bg-gray-50">
                 <div className="w-full aspect-square bg-white rounded-md flex items-center justify-center mb-3 p-2">

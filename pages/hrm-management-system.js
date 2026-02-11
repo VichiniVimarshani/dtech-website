@@ -163,12 +163,13 @@ export default function HRMManagementSystem() {
             <section className="py-20 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <h2 className="text-3xl font-bold mb-12">Technology Stack</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8">
                         {[
                             { name: "React", label: "Frontend", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
                             { name: "Node.js", label: "Backend API", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
                             { name: "MySQL", label: "Database", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
                             { name: "Flutter", label: "Mobile App", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
+                            { name: "AWS", label: "Infrastructure", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
                             { name: "DigitalOcean", label: "Hosting", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg" },
                             { name: "NGINX", label: "Deployment", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" },
                         ].map((tech, idx) => (
